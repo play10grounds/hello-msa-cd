@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
         - name: msa-usersrv
-          image: siestageek/msa-userservice
+          image: siestageek/msa-user-service
           ports:
             - containerPort: 8000
               protocol: TCP
