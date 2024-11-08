@@ -6,9 +6,9 @@ replicaCount: 2
 
 frontend:
   repository: siestageek/msa-frontend
-  tag: v20241108.11
+  tag: v20241108.9
 
 userserv:
   repository: siestageek/msa-user-service
-  tag: v20241108.11
+  tag: v20241108.9
   
