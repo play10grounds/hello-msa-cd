@@ -5,7 +5,7 @@ metadata:
   labels:
     app: msa-frontend
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: msa-frontend
@@ -34,7 +34,7 @@ metadata:
   labels:
     app: msa-usersrv
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: msa-usersrv
