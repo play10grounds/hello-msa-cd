@@ -5,7 +5,7 @@ metadata:
   labels:
     app: msa-frontend
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: msa-frontend
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: msa-frontend
-          image: siestageek/msa-frontend
+          image: "{{ .Values.frontend.repository }}:{{ .Values.frontend.tag }}"
           ports:
             - containerPort: 3000
               protocol: TCP
@@ -34,7 +34,7 @@ metadata:
   labels:
     app: msa-usersrv
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: msa-usersrv
@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
         - name: msa-usersrv
-          image: siestageek/msa-user-service
+          image: "{{ .Values.userserv.repository }}:{{ .Values.userserv.tag }}"
           ports:
             - containerPort: 8000
               protocol: TCP
