@@ -11,4 +11,6 @@ frontend:
 userserv:
   repository: siestageek/msa-user-service
   tag: v20241108.9
-  
+
+server:
+  ip: 127.0.0.1
